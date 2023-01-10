@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+
+<body>
+
+    <div>
+        <input type="message" id="string" placeholder="Enter the sentence" style="padding: 1% ;margin: 1%;">
+        <input type="text" id="letter" placeholder="Enter the letter" style="padding: 1% ;margin: 1%;">
+        <button onclick="findTheLetter()">Submit</button>
+    </div>
+
+</body>
+<script>
+    function findTheLetter() {
+        var string = document.getElementById("string").value;
+        var letter = document.getElementById("letter").value;
+        if (string.indexOf(letter) == -1) {
+            alert("The letter does not exist in the sentence");
+
+        }
+        else {
+            var resultstring = string.substring(string.indexOf(letter) + 1);
+            alert(resultstring);
+        }
+    }
+</script>
+
+</html>
